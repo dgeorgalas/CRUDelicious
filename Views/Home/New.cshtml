@@ -1,0 +1,44 @@
+@model Dish
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new Dish!</h1>
+    <a href="/">Home</a>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <span asp-validation-for="ChefName"></span>
+        <label asp-for="ChefName"></label><br>
+        <input asp-for="ChefName"> <br><br>
+
+        <span asp-validation-for="DishName"></span>
+        <label asp-for="DishName"></label><br>
+        <input asp-for="DishName"> <br><br>
+
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"></label><br>
+        <input asp-for="Calories"> <br><br>
+
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label><br>
+        <select asp-for="Tastiness">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select> <br><br>
+
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label><br>
+        <textarea asp-for="Description"></textarea> <br><br>
+
+        <input type="submit" value="Add Dish">
+    </form>
+</body>
+</html>
